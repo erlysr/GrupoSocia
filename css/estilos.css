@@ -1,39 +1,84 @@
-#caja-h1{
+/* 
+COLORES
+Gris Claro: #d4d6d7;
+Gris Obscuro: #bfc0c2;
+Azul: #21527a;
+Naranja: #fb8e00;
+Gris Obscuro Letra: #464b4e;
+Gris Claro Letra: #d4d6d7;
 
-	margin-top: 60px;
-	margin-left: 20px;
-	margin-right: 20px;
-	padding: 20px;
-	display: inline-block;
+Difusos
+Naranja: #e97000;
+Amarillo: #f7c200;
+Violeta: #de1e29;
+Violeta Claro: #df1c74;
+Verde: #9bca3c;
+Verde claro: #70b543;
 
+Boton Azul: #99adbd;
+Negro Letra: #212b34;
+
+
+*/
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot?qong0c');
+	src:url('../fonts/icomoon/icomoon.eot?#iefixqong0c') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff?qong0c') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf?qong0c') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg?qong0c#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
-#caja-texto{
-	margin-top: 20px;
-	background-color: white;
-	margin-left: 20px;
-	margin-right: 20px;
-	padding: 20px;
-	display: inline-block;
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
+
+.icon-facebook2:before {
+	content: "\ea8d";
+}
+
+.icon-twitter2:before {
+	content: "\ea92";
+}
+
+.icon-youtube3:before {
+	content: "\ea99";
+}
+
 body{
 	color: black;
-	font-family: 'Sanchez';
-	font-size: 15px;
-	line-height: 1.6em;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	line-height: 1.4em;
+	font-weight: 400;
+	background-color: #d4d6d7;
 }
 h1{
-	font-family: 'Lobster';
+	font-family: 'Impact';
 	font-size: 2.8em;
 	line-height: 1em;
+	color: #464b4e;
 }
 h2{
-	font-family: 'Lobster';
+	font-family: 'Impact';
 	font-size: 2.8em;
 	line-height: 1em;
 
 }
 h3{
-	font-family: 'Lobster';
+	font-family: 'Impact';
 	font-size: 2em;
 	line-height: 1.2em;
 	letter-spacing: 2px;
@@ -41,77 +86,93 @@ h3{
 	margin-top: 5px;
 }
 h4{
-	font-family: 'Lobster';
+	font-family: 'Impact';
 	font-size: 1.4em;
 	line-height: 1.2em;
 	letter-spacing: 1px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	color: #464b4e;
 
-}
-h1, h2, h3, article{
-	background-color: white;
+
 }
 a{
-	color: #ffc502;
+	color: #212b34;
 }
 a:hover{
-	color: black;
+	color: #212b34; /* Negro Letra */
+	background-color: #99adbd; /* Azul Gris */
 }
 a:active{
-	color: black;
+	color: white;
+	background-color: #21527a; /* Azul Marino */
 }
-header { 
-    background: url("../img/texturaroja.jpg"); 
-    width: 100%;
-    height: auto;
-    background-repeat: repeat;
-    position: fixed;
-    z-index: 1000;
 
-}
-header .logo{
-	padding-left: 20px;
-}
-header .menu{
-	margin-top: 50px;
-	margin-right: 10px;
-	background-color: transparent;
-	font-family: 'Sanchez';
-	font-size: .85em;
-	letter-spacing: 3px;
-}
 article{
 	text-align: justify;
-}
-
-.row{
 	padding-top: 20px;
-}
-.parallax-sec{
-	padding-top: 130px;
-}
-.contenido-sec{
-	padding-top: 10px;
 	padding-bottom: 20px;
 }
-.contenido-sec .imagen-gal{
-	padding-bottom: 20px;
+#logo-socia{
+	width: 40px;
+	padding-left: 20px;
 }
-.ubicacion-sec{
-	padding-top: 150px;
+.sec-gris1{
+	background-color: #bfc0c2;
+	padding-top: 100px;
+	padding-bottom: 50px;
 }
-footer {
- 	background: url("../img/texturaamarilla.jpg"); 
- 	padding-bottom: 10px;
+.sec-gris{
+	background-color: #bfc0c2;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
-footer .row{
-	padding-top: 0;
+.sec-gris .contenido-sec .bloque-col{
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
 }
-footer article{
-	background-color: transparent;
+.sec-gris .contenido-sec .bloque-col article{
+	border-top-style: solid;
+	border-top: 1px;
+	border-color: #212b34;
 }
-footer .logo-redes{
-	width: 60px;
-}
+.sec-gris-obs{
+	background-color: #21527a;
+	color: #d4d6d7;
+	padding-top: 50px;
+	padding-bottom: 50px;
 
+}
+.sec-gris-obs .contenido-sec{
+	overflow: hidden;
+}
+.sec-gris-obs .contenido-sec .graficas{
+	position: relative;
+}
+.sec-gris-obs .contenido-sec .graficas .grafica1{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	width: 300px;
+}
+.sec-gris-obs .contenido-sec .graficas .grafica2{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	z-index: 1;
+	width: 300px;
+}
+footer .liga-foo{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 3px;
+	border-bottom-style: solid;
+	border-color: white;
+}
+footer .iconos-redes{
+	padding-top: 15px;
+	padding-bottom: 5px;
+	font-size: 30px;
+}
